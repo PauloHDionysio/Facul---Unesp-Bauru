@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Manu e Paulo">
+    <meta name="description" content="Resolucao do trabalho 1 - Pesquisa Operacional">
+    <link rel="stylesheet" type="text/css" href="Simplex.css" media="screen" />
+    <title>Método Simplex</title>
+</head>
+<body>
+
+
+<!-- C A B E Ç A L H O =============================================================================================== -->
+
+    <header>
+        <div class="cabecalho">
+            <img src="Logo.png" width="100px" alt="Foto cabecalho">
+
+            <div class="titulos">
+                <h1>Método Simplex</h1>
+                <p class="subTitulo">Calculadora de otimização linear</p>
+            </div>
+
+            <div class="creditos">
+                <p>Feito por:</p>
+                <p>Manu e Paulo</p>
+            </div>
+
+            <div class="nota">
+                <p>Para verificar o simplex passo a passo, abra o console nas ferramentas de desenvolvedor ;)</p>
+            </div>
+        </div>
+    </header>
+
+
+<!-- C O R P O ======================================================================================================= -->
+
+    <div class="pagina">
+
+        <!-- 1. INSERÇÃO DOS DADOS ----------------------------------------------------------------------------------- -->
+        <div class="formulario">
+            <form action="" id="formName">
+
+                <!-- I. Número de Variáveis -->
+                <fieldset id="CampoNumVar">
+                    <legend> Número de variáveis (2 - 5) </legend>
+
+                    <input type="number" class="numVariaveis" id="numVariaveis" min="2" max="5" value="2" required>
+                </fieldset>
+
+
+                <!-- II. Função objetivo -->
+                <fieldset id="CampoFuncObj">
+                    <legend> Função Objetivo </legend>
+
+                    <div id="funcaoObjetivo">
+                            <!-- Função objetivo gerada dinamicamente pelo JavaScript -->
+                    </div>
+                </fieldset>
+
+
+                <!-- III. Restrições -->
+                <fieldset class="CampoRestr" id="CampoRestr">
+                    <legend> Restrições </legend>
+
+                    <div id="restricoes">
+                      <!-- Restrições geradas dinamicamente pelo JavaScript -->
+                    </div>
+
+                    <br><br>
+                    <button type="button" class="add" onclick="adicionaRestricao()">Adicionar Nova Restrição</button><br><br>
+                    <button type="button" class="rem" onclick="removeRestricao()">Remover Última Restrição</button><br><br>
+                </fieldset>
+
+
+                <!-- IV. Botão de Envio -->
+                <input type="submit" class="botaoCalcular" onclick="validaCampos()" id="botao" value="Calcular!">
+            </form>
+        </div>
+
+
+
+        <!-- 2. RESULTADO DO SIMPLEX --------------------------------------------------------------------------------- -->
+        <div class="resultadoSimplex" id="resultadoSimplex" hidden>
+            
+            <!-- Botao para novo Simplex-->
+        </div>
+        <!-- FINAL DA PÁGINA -->
+    </div>
+
+    <script type="text/javascript" src="Simplex.js"5></script>
+</body>
+</html>
