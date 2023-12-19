@@ -1,5 +1,1 @@
-Trabalho de implementação do método Simplex em Java Script.
-
-Feito por:
-Manuele Christofalo
-Paulo Henrique Dionysio
+Código da página Web (HTML, CSS e JavaScript) responsável por uma aplicação que, no contexto da otimização linear, dá a melhor solução através do Método Simplex.
